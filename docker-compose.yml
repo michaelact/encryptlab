@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: encryptlab
+    container_name: encryptlab-app
+    restart: always
+    ports:
+      - 3000:3000
+
+networks:
+  default:
+    external: true
+    name: encryptlab
